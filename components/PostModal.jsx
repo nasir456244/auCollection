@@ -14,7 +14,9 @@ import { UploadImagesAndCollection } from "@/lib/db";
 import { serverTimestamp } from "firebase/firestore";
 import { CollectBrisbaneContext } from "@/context/CollectBrisbane";
 import { useMutation } from "@tanstack/react-query";
-
+import * as yup from 'yup';
+import {yupResolver } from '@hookform/resolvers/yup'
+import "yup-phone"
 const initialValues = {
   title: "",
   number: "",
@@ -24,12 +26,21 @@ const initialValues = {
 };
 
 const PostModal = ({ addClient }) => {
-  const { register, handleSubmit } = useForm();
   const [open, setOpen] = useState(false);
-  const [formValues, SetFormValues] = useState(initialValues);
   const [files, setFile] = useState([]);
   const [message, setMessage] = useState();
   const { user } = useContext(CollectBrisbaneContext);
+
+  const schema = yup.object().shape({
+    Title: yup.string().trim().min(5).max(50).required(),
+    Category: yup.string().trim().min(2).max(50).required(),
+    Number: yup.string().trim().phone("AU").min(10).max(10).required(),
+    Address: yup.string().trim().min(5).max(150).required(),
+    Description: yup.string().trim().min(50).max(500).required()
+  })
+  const { register, handleSubmit, formState:{errors}, reset } = useForm({
+    resolver: yupResolver(schema),
+  });
   const addClientMutation = useMutation(UploadImagesAndCollection, {
     onSuccess: (doc) => {
       addClient(doc);
@@ -75,21 +86,42 @@ const PostModal = ({ addClient }) => {
     setFile(files.filter((x) => x.name !== i));
   };
 
-  const validate = (item) => item.replace(/\s+/g, " ").trim();
+  const removeSpace = (item) => item.replace(/\s+/g, " ");
 
-  const handlePostCollection = async () => {
-    if (files.length < 1 || files.length > 5) return;
-    const checkDes = validate(formValues.description);
-    const checkTit = validate(formValues.title);
-    const checkCat = validate(formValues.category);
-    const checkAdr = validate(formValues.address);
-    const checkNum = validate(formValues.number);
-    if (checkDes.length < 30 || checkDes.length > 500) return;
-    if (checkAdr.length < 5 || checkAdr.length > 150) return;
-    if (checkCat.length < 2 || checkCat.length > 50) return;
-    if (checkTit.length < 5 || checkNum.length > 50) return;
-    if (checkNum.length !== 10 && !checkNum.match(/^0[0-9]{9}$/)) return;
-
+  const handlePostCollection = async (data) => {
+    if (files.length < 1 || files.length > 5) {
+      alert('Please upload at least 1-5 Png or jpg or jpg. its required');
+      return;
+    };
+    const checkDes = removeSpace(data.Description);
+    const checkTit = removeSpace(data.Title);
+    const checkCat = removeSpace(data.Category);
+    const checkAdr = removeSpace(data.Address);
+    const checkNum = removeSpace(data.Number);
+    const filesToUpload = files;
+    
+    if (checkTit.length < 5 || checkNum.length > 50 || checkTit == "")  {
+      alert('Title is required and must be at least 5 characters');
+      return;
+    };
+    if (checkCat.length < 2 || checkCat.length > 50 || checkCat == "") {
+      alert('Category is required and must be at least 2 characters');
+      return;
+    };
+    if (checkNum.length !== 10 && !checkNum.match(/^0[0-9]{9}$/) || checkNum == "") {
+      alert('Contact number is required and must be AU region format & must be at least 10 characters');
+      return;
+    };
+    if (checkAdr.length < 5 || checkAdr.length > 150 || checkAdr == "") {
+      alert('Address is required and must be at least 5 characters');
+      return;
+    };
+    if (checkDes.length < 50 || checkDes.length > 500 || checkDes == "") {
+      alert('Description is required and must be at least 50 characters');
+      return;
+    };
+    reset();
+    setFile([]);
     const CollectionToPost = {
       Title: checkTit?.slice(0, 50),
       Category: checkCat?.slice(0, 50),
@@ -101,11 +133,15 @@ const PostModal = ({ addClient }) => {
       uid: user?.uid,
     };
 
-    addClientMutation.mutate({ images: files, CollectionToPost });
+    addClientMutation.mutate({ images: filesToUpload, CollectionToPost });
     return;
   };
 
-  const handleOpen = () => setOpen(!open);
+  const handleOpen = () => {
+    SetFormValues(initialValues);
+    setFile([]);
+    setOpen(!open);
+  }
 
   return (
     <Fragment>
@@ -120,72 +156,52 @@ const PostModal = ({ addClient }) => {
               onSubmit={handleSubmit(handlePostCollection)}
               className="flex flex-col"
             >
-              <DialogBody divider className="flex flex-col">
+              <DialogBody divider className="flex flex-col gap-3">
+              <p className="text-[#f00] text-center">{errors.Title?.message}</p>
                 <Input
+                  {...register("Title")}
                   label="Title"
-                  value={formValues.title}
-                  onChange={handleInputChange}
                   required
-                  minLength={5}
-                  maxLength={50}
-                  name="title"
-                />
-                <span className="text-end relative bottom-1">
-                  {formValues.title.length}/50
-                </span>
-                <Input
-                  label="Category"
-                  value={formValues.category}
-                  onChange={handleInputChange}
-                  name="category"
-                  required
-                  minLength={2}
                   maxLength={50}
                 />
-                <span className="text-end relative bottom-1">
-                  {formValues.category.length}/50
-                </span>
 
+                <p className="text-[#f00] text-center">{errors.Category?.message}</p>
+                <Input
+                  {...register("Category")}
+                  label="Category"
+                  required
+                  maxLength={50}
+                />
+
+                <p className="text-[#f00] text-center">{errors.Number?.message}</p>
                 <Input
                   type="tel"
-                  pattern="^0[0-9]{9}$"
+                  {...register("Number")}
                   label="Contact Number"
-                  value={formValues.number}
-                  onChange={handleInputChange}
-                  name="number"
                   required
-                  minLength={10}
                   maxLength={10}
+  
                 />
-                <span className="text-end relative bottom-1">
-                  {formValues.number.length}/10
-                </span>
+
+                <p className="text-[#f00] text-center">{errors.Address?.message}</p>
 
                 <Input
                   label="Pick up address"
-                  value={formValues.address}
-                  onChange={handleInputChange}
-                  name="address"
+                  {...register("Address")}
                   required
-                  minLength={5}
                   maxLength={150}
-                />
-                <span className="text-end relative bottom-1">
-                  {formValues.address.length}/150
-                </span>
 
+                />
+
+                <p className="text-[#f00] text-center">{errors.Description?.message}</p>
                 <Textarea
                   label="Description"
-                  value={formValues.description}
-                  onChange={handleInputChange}
-                  name="description"
+                  {...register("Description")}
                   required
-                  minLength={50}
                   maxLength={500}
+
                 />
-                <span className="text-end relative bottom-3">
-                  {formValues.description.length}/500
-                </span>
+
 
                 <div className="p-3 w-full relative bottom-3 rounded-md">
                   <span className="flex justify-center items-center text-[12px] mb-1 text-red-500">
@@ -193,13 +209,9 @@ const PostModal = ({ addClient }) => {
                   </span>
                   <div className="h-32 w-full m-auto relative border-2 items-center rounded-md cursor-pointer bg-gray-300 border-gray-400 border-dotted">
                     <input
-                      {...register("files[]", {
-                        required: true,
-                        minLength: 1,
-                        maxLength: 5,
-                      })}
                       type="file"
                       value={formValues.files}
+                      required
                       name="files[]"
                       onChange={handleFile}
                       disabled={files.length == 5}
@@ -253,7 +265,7 @@ const PostModal = ({ addClient }) => {
                 >
                   <span>Cancel</span>
                 </Button>
-                <Button variant="gradient" color="green" type="submit">
+                <Button className="disabled:cursor-not-allowed" disabled={Object.keys(errors).length || files.length < 1} variant="gradient" color="green" type="submit">
                   <span>Confirm</span>
                 </Button>
               </DialogFooter>

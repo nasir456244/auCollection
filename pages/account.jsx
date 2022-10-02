@@ -1,11 +1,15 @@
 import Header from '@/components/Header'
-import React from 'react'
+import { CollectBrisbaneContext } from '@/context/CollectBrisbane';
+import { Button } from '@material-tailwind/react';
+import React, { useContext } from 'react'
 
 const account = () => {
+  const { user, logout } = useContext(CollectBrisbaneContext);
+
   return (
     <div>
         <Header />
-        <h1>Account</h1>
+        {user && <Button onClick={logout}>log out</Button>}
     </div>
   )
 }

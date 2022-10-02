@@ -1,6 +1,9 @@
+import { Tooltip } from "@material-tailwind/react";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Table = ({ title, photo, createdAt ,id}) => {
+  const router = useRouter();
   return (
     <tbody>
       <tr>
@@ -32,21 +35,12 @@ const Table = ({ title, photo, createdAt ,id}) => {
             <span className="relative">Paid</span>
           </span>
         </td>
-        <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
-          <button
-            type="button"
-            className="inline-block text-gray-500 hover:text-gray-700"
-          >
-            <svg
-              className="inline-block h-6 w-6 fill-current"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M12 6a2 2 0 110-4 2 2 0 010 4zm0 8a2 2 0 110-4 2 2 
-                                        0 010 4zm-2 6a2 2 0 104 0 2 2 0 00-4 0z"
-              />
-            </svg>
-          </button>
+        <td className="px-5 py-5 border-b border-black-200 bg-white text-sm text-right">
+            <Tooltip content="Visit">
+              <svg onClick={() => router.push(`/collection/${id}`)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 text-black h-6 cursor-pointer">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+            </Tooltip>
         </td>
       </tr>
     </tbody>

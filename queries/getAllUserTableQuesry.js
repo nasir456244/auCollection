@@ -9,7 +9,7 @@ import {
   where,
 } from "firebase/firestore";
 
-export const getClientsFn = async (lastKey, pageSize, user) => {
+export const getUserTables = async (lastKey, pageSize, user) => {
   if (!user) return;
 
   let q = query(

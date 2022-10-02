@@ -4,7 +4,7 @@ import React, { useContext, useState } from "react";
 import EmptyTable from "./EmptyTable";
 import Table from "./Table";
 import { useQuery } from "@tanstack/react-query";
-import { getClientsFn } from "queries/clientQueryFn";
+import { getUserTables } from "queries/getAllUserTableQuesry";
 import { Button } from "@material-tailwind/react";
 import PostModal from "./PostModal";
 
@@ -16,8 +16,8 @@ const GetTable = () => {
   const [page, setPage] = useState(1);
 
   const { data, isLoading } = useQuery(
-    ["clients", page],
-    () => getClientsFn(lastDoc, limit, user),
+    ["Collections", page],
+    () => getUserTables(lastDoc, limit, user),
     {
       onSuccess(data) {
         const newData = data?.docs.map((doc) => ({

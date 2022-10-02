@@ -35,13 +35,10 @@ export const CollectBrisbaneProvider = ({ children }) => {
     signInWithPopup(auth, googleProvider)
       .then(response => {
         handleUser(response.user)    
-        router.push('/dashboard')
+        router.push('/')
       })
       .catch(error => {
-        toast.dismiss(loading)
-        toast.error(error.message, {
-          style: { background: "#04111d", color: "#fff" },
-        });
+        alert(error.message)
       })
   }
 
@@ -50,7 +47,7 @@ export const CollectBrisbaneProvider = ({ children }) => {
     signInWithPopup(auth, facebookProvider)
       .then(response => {
         handleUser(response.user)
-        router.push('/dashboard')
+        router.push('/')
       })
       .catch(error => {
         alert(error.message)
