@@ -17,13 +17,7 @@ import { useMutation } from "@tanstack/react-query";
 import * as yup from 'yup';
 import {yupResolver } from '@hookform/resolvers/yup'
 import "yup-phone"
-const initialValues = {
-  title: "",
-  number: "",
-  description: "",
-  address: "",
-  category: "",
-};
+
 
 const PostModal = ({ addClient }) => {
   const [open, setOpen] = useState(false);
@@ -44,19 +38,10 @@ const PostModal = ({ addClient }) => {
   const addClientMutation = useMutation(UploadImagesAndCollection, {
     onSuccess: (doc) => {
       addClient(doc);
-      SetFormValues(initialValues);
-      setFile([]);
       setOpen(false);
     },
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    SetFormValues({
-      ...formValues,
-      [name]: value,
-    });
-  };
 
   const handleFile = (e) => {
     setMessage("");
@@ -138,8 +123,8 @@ const PostModal = ({ addClient }) => {
   };
 
   const handleOpen = () => {
-    SetFormValues(initialValues);
     setFile([]);
+    reset();
     setOpen(!open);
   }
 
@@ -210,13 +195,12 @@ const PostModal = ({ addClient }) => {
                   <div className="h-32 w-full m-auto relative border-2 items-center rounded-md cursor-pointer bg-gray-300 border-gray-400 border-dotted">
                     <input
                       type="file"
-                      value={formValues.files}
                       required
                       name="files[]"
                       onChange={handleFile}
                       disabled={files.length == 5}
                       className="h-full w-full disabled:cursor-not-allowed 
-                                    bg-green-200 opacity-0 z-10 absolute"
+                        bg-green-200 opacity-0 z-10 absolute"
                       multiple="multiple"
                       minLength={1}
                       maxLength={5}

@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { CollectBrisbaneContext } from '@/context/CollectBrisbane';
 import { useRouter } from 'next/router';
 import Header from '@/components/Header';
+import InfoPage from '@/components/InfoPage';
 
 
 
@@ -42,7 +43,9 @@ const collection = () => {
   return (
     <div className={styles.container}>
         <Header />
-        <div className='text-black'>{tableData.id}</div>
+        <div className='text-black'>
+          <InfoPage {...tableData} />
+        </div>
     </div>
   )
 }

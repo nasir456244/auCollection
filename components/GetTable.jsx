@@ -53,73 +53,60 @@ const GetTable = () => {
   };
 
   return (
-    <>
-      <div>
-        <div className="container mx-auto px-4 sm:px-8">
-          <div className="py-8">
-            <div className="flex justify-between">
-              <h2 className="text-2xl text-gray-900 font-semibold leading-tight">
-                Invoices
+    
+      <div className="my-8 flex flex-col gap-7">
+            <div className="flex justify-between px-10 gap-5 xl:mx-[14%] ">
+              <h2 className="text-2xl text-center text-gray-900 font-semibold leading-tight">
+                Collections
               </h2>
               <PostModal addClient={addClient} />
             </div>
-            <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
-              <div className="inline-block w-[800px] min-w-full shadow-md rounded-lg overflow-hidden ">
-                <table className="min-w-full leading-normal">
-                  <thead>
-                    <tr>
-                      <th
-                        className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left 
-                            text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                      >
-                        Client / Invoice
-                      </th>
-                      <th
-                        className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left 
-                            text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                      >
-                        Title
-                      </th>
-                      <th
-                        className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 
-                            text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                      >
-                        Date Added
-                      </th>
-                      <th
-                        className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left 
-                            text-xs font-semibold text-gray-700 uppercase tracking-wider"
-                      >
-                        Status
-                      </th>
-                      <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"></th>
-                    </tr>
-                  </thead>
-                  {tableData?.map((data) => (
+            
+      <div className="w-full text-black flex justify-center">
+        <div className="overflow-auto shadow-xl rounded-[10px] bg-[#f5f5f5]">
+          <table className="w-[1280px] ">
+            <div className="grid grid-cols-8 text-center">
+
+            <th className="px-5 py-3 text-left border-b-2 border-gray-200 
+              text-xs font-semibold col-span-2 text-gray-700 uppercase tracking-wider">Title</th>
+            <th className="px-5 py-3 border-b-2 text-left border-gray-200 
+              text-xs font-semibold col-span-2 text-gray-700 uppercase tracking-wider">description</th>
+            <th className="px-5 py-3 border-b-2 border-gray-200 
+              text-xs font-semibold text-gray-700 uppercase tracking-wider">date</th>
+            <th className="px-5 py-3 border-b-2 border-gray-200 
+              text-xs font-semibold text-gray-700 uppercase tracking-wider">status
+            </th>
+            <th className="px-5 py-3 border-b-2 border-gray-200 
+              text-xs font-semibold text-gray-700 uppercase tracking-wider">Delete
+            </th>
+            </div>
+            {tableData?.map((data) => (
                     <Table
                       key={data?.id}
                       id={data?.id}
                       title={data?.Title}
                       photo={data?.photos[0]}
                       createdAt={data?.createdAt}
+                      category={data?.Category}
                     />
                   ))}
-                </table>
-                <div className="flex m-4 gap-4">
-                  <Button
-                    disabled={!!data?.empty}
-                    className="bg-cyan-500 px-4 text-white disabled:bg-cyan-50 disabled:cursor-not-allowed"
-                    onClick={handleNextPage}
-                  >
-                    Load More
-                  </Button>
-                </div>
-              </div>
-            </div>
+          </table>
+
+          <div className="flex m-4 gap-4">
+            <Button
+              disabled={!!data?.empty}
+              className="bg-cyan-500 px-4 text-white disabled:bg-cyan-50 disabled:cursor-not-allowed"
+              onClick={handleNextPage}
+            >
+            Load More
+            </Button>
           </div>
         </div>
+
       </div>
-    </>
+
+      </div>
+
   );
 };
 
