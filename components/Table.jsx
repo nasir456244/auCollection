@@ -4,32 +4,32 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 
-const Table = ({ title, photo, createdAt ,id, category}) => {
+const Table = ({ title, photo, createdAt ,id, description}) => {
   const router = useRouter();
   return (
     <div className="text-black w-full">
 
-      <tr className="grid grid-cols-8 border-[1.8px] bg-white gap-3">
-        <td className="flex overflow-hidden gap-2 relative col-span-2 items-center justify-start p-2">
+      <div className="grid grid-cols-9 border-[1.8px] bg-white gap-3">
+        <div className="flex overflow-hidden text-gray-800 font-semibold tracking-wider text-[13px] gap-2 relative col-span-2 items-center justify-start p-2">
           <div className="flex items-center justify-center rounded-[10px]">
-          <Image layout="fixed" width={80} className="rounded-[10px]" height={80} src={photo} />
+          <Image property='true' layout="fixed" width={80} className="rounded-[10px]" height={80} src={photo} />
           </ div>
         <p>{title}</p>
-        </td>
+        </div>
 
-        <td className="col-span-2 overflow-hidden flex items-center justify-start">
-          <p>{category}</p>
-        </td>
+        <div className="col-span-2 font-semibold tracking-wider text-gray-800 text-[13px] overflow-hidden flex items-center justify-start">
+          <p className="truncate">{description}</p>
+        </div>
 
-        <td className="overflow-hidden flex items-center justify-center">
-          <p>{createdAt && moment(createdAt?.toDate())?.format('Do MMM YYYY, h:mm a')}</p>    
-        </td>
+        <div className="overflow-hidden flex items-center text-gray-800 justify-center font-semibold text-[12px]">
+          <p>{ createdAt?.seconds ? moment(createdAt?.toDate())?.format('Do MMM YYYY, h:mm a') : moment().format('Do MMM YYYY, h:mm a')}</p>    
+        </div>
 
-        <td className="overflow-hidden flex items-center justify-center">
-          <p>status</p>
-        </td>
+        <div className="overflow-hidden flex items-center justify-center">
+          <p className="bg-[#ceedff] font-semibold text-[13px] text-blue-900 uppercase rounded-[2px] px-1 ">review</p>
+        </div>
 
-        <td className="overflow-hidden flex items-center justify-center">
+        <div className="overflow-hidden flex items-center justify-center">
           <div className="inline-block  flex items-center justify-center 
           text-gray-500 hover:text-gray-700">
             <IconButton color='gray'>
@@ -39,17 +39,17 @@ const Table = ({ title, photo, createdAt ,id, category}) => {
               </svg>
             </IconButton> 
           </div>        
-        </td>
+        </div>
 
-        <td className="overflow-hidden flex items-center justify-center">
+        <div className="overflow-hidden flex items-center justify-center">
         <Tooltip content="visit">
           <svg onClick={() => router.push(`/collection/${id}`)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 cursor-pointer">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
           </svg>
         </Tooltip>
 
-        </td>
-      </tr>
+        </div>
+      </div>
     </div>
   );
 };

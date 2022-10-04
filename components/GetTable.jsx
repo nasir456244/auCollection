@@ -64,21 +64,21 @@ const GetTable = () => {
             
       <div className="w-full text-black flex justify-center">
         <div className="overflow-auto shadow-xl rounded-[10px] bg-[#f5f5f5]">
-          <table className="w-[1280px] ">
-            <div className="grid grid-cols-8 text-center">
+          <div className="w-[1280px] ">
+            <div className="grid grid-cols-9 text-center">
 
-            <th className="px-5 py-3 text-left border-b-2 border-gray-200 
-              text-xs font-semibold col-span-2 text-gray-700 uppercase tracking-wider">Title</th>
-            <th className="px-5 py-3 border-b-2 text-left border-gray-200 
-              text-xs font-semibold col-span-2 text-gray-700 uppercase tracking-wider">description</th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 
-              text-xs font-semibold text-gray-700 uppercase tracking-wider">date</th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 
+            <div className="px-5 py-3 text-left border-b-2 border-gray-200 
+              text-xs font-semibold col-span-2 text-gray-700 uppercase tracking-wider">Title</div>
+            <div className="px-5 py-3 border-b-2 text-left border-gray-200 
+              text-xs font-semibold col-span-2 text-gray-700 uppercase tracking-wider">description</div>
+            <div className="px-5 py-3 border-b-2 border-gray-200 
+              text-xs font-semibold text-gray-700 uppercase tracking-wider">date</div>
+            <div className="px-5 py-3 border-b-2 border-gray-200 
               text-xs font-semibold text-gray-700 uppercase tracking-wider">status
-            </th>
-            <th className="px-5 py-3 border-b-2 border-gray-200 
+            </div>
+            <div className="px-5 py-3 border-b-2 border-gray-200 
               text-xs font-semibold text-gray-700 uppercase tracking-wider">Delete
-            </th>
+            </div>
             </div>
             {tableData?.map((data) => (
                     <Table
@@ -86,11 +86,11 @@ const GetTable = () => {
                       id={data?.id}
                       title={data?.Title}
                       photo={data?.photos[0]}
-                      createdAt={data?.createdAt}
                       category={data?.Category}
+                      description={data?.Description}
                     />
                   ))}
-          </table>
+          </div>
 
           <div className="flex m-4 gap-4">
             <Button

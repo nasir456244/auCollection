@@ -32,9 +32,11 @@ const PostModal = ({ addClient }) => {
     Address: yup.string().trim().min(5).max(150).required(),
     Description: yup.string().trim().min(50).max(500).required()
   })
+
   const { register, handleSubmit, formState:{errors}, reset } = useForm({
     resolver: yupResolver(schema),
   });
+
   const addClientMutation = useMutation(UploadImagesAndCollection, {
     onSuccess: (doc) => {
       addClient(doc);
@@ -117,7 +119,6 @@ const PostModal = ({ addClient }) => {
       email: user?.email,
       uid: user?.uid,
     };
-
     addClientMutation.mutate({ images: filesToUpload, CollectionToPost });
     return;
   };
@@ -131,7 +132,7 @@ const PostModal = ({ addClient }) => {
   return (
     <Fragment>
       <Button onClick={handleOpen} variant="gradient">
-        Add Clients
+        Add Collection
       </Button>
       {open && (
         <div className="backdrop-blur-sm fixed left-0 flex z-50 top-0 w-screen h-screen overflow-auto px-5">
