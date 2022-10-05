@@ -9,7 +9,7 @@ Address, Number, createdAt, photos}) => {
       <Card className="max-w-[1000px] max-h-full overflow-hidden">
       <CardHeader color="blue" className="max-h-[400px] max-w-full overflow-auto flex-wrap mt-5 items-center gap-2 justify-center flex p-5">
       {photos?.map((photo) => (
-          <Image priority='true' key={photo} className="rounded-[10px] bg-[#fff]" layout='fixed' width={300} height={200} src={photo}  alt="collection-Photo" />
+          <Image priority='true' key={photo} className="rounded-[10px] bg-[#fff]" layout='fixed' width={280} height={180} src={photo}  alt="collection-Photo" />
         ))}
       </CardHeader>
       <CardBody className="text-center">
