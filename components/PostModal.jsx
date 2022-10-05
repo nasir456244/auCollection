@@ -39,7 +39,8 @@ const PostModal = ({ addClient }) => {
 
   const addClientMutation = useMutation(UploadImagesAndCollection, {
     onSuccess: (doc) => {
-      addClient(doc);
+      const now = doc.filter(Boolean);
+      addClient(now);
       setOpen(false);
     },
   });

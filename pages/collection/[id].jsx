@@ -9,7 +9,7 @@ import InfoPage from '@/components/InfoPage';
 
 
 const styles = {
-  container: `p-3`,
+  container: `p-3 w-full h-full`,
 };
 
 
@@ -43,7 +43,7 @@ const collection = () => {
   return (
     <div className={styles.container}>
         <Header />
-        <div className='text-black'>
+        <div>
           <InfoPage {...tableData} />
         </div>
     </div>
