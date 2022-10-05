@@ -19,7 +19,7 @@
 .DS_Store
 *.pem
 
-/.env
+.env
 
 
 # debug
