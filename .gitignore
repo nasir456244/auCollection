@@ -21,7 +21,6 @@
 
 .env
 
-/backend
 
 # debug
 npm-debug.log*
