@@ -3,6 +3,8 @@ import Image from 'next/image'
 import React, { useContext } from 'react'
 import  facebook   from '@/public/facebook.svg'
 import  google   from '@/public/google.svg'
+import  tailus   from '@/public/tailus.svg'
+
 import { CollectBrisbaneContext } from '@/context/CollectBrisbane'
 
 const login = () => {
@@ -17,7 +19,7 @@ const login = () => {
               <div className="rounded-xl bg-white shadow-xl">
                   <div className="p-6 sm:p-16">
                       <div className="space-y-4">
-                          <img src="https://tailus.io/sources/blocks/social/preview/images/icon.svg" loading="lazy" className="w-10" alt="tailus logo" />
+                          <Image src={tailus} alt="tailus-logo" priority='true' height={35} width={35} />
                           <h2 className="mb-8 text-2xl text-cyan-900 font-bold">Sign in to unlock the <br /> best of Collect Brisbane.</h2>
                       </div>
                       <div className="mt-16 grid space-y-4">
