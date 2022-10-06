@@ -224,6 +224,7 @@ const PostModal = ({ addClient }) => {
                         >
                           <div className="h-[100px] relative w-[200px]">
                             <Image
+                              alt="previewImage"
                               layout="fill"
                               className="rounded-md"
                               src={URL.createObjectURL(file)}

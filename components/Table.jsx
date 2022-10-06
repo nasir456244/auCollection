@@ -12,7 +12,7 @@ const Table = ({ title, photo, createdAt ,id, description, status}) => {
       <div className={`grid grid-cols-9 border-[1.8px] bg-white gap-3 ${status === 'complete' && 'bg-gray-200'} `}>
         <div className="flex overflow-hidden text-gray-800 font-semibold tracking-wider text-[13px] gap-2 relative col-span-2 items-center justify-start p-2">
           <div className="flex items-center justify-center rounded-[10px]">
-          <Image property='true' layout="fixed" width={80} className="rounded-[10px]" height={80} src={photo} />
+          <Image property='true' layout="fixed" alt="preiewImage" width={80} className="rounded-[10px]" height={80} src={photo} />
           </ div>
         <p>{title}</p>
         </div>

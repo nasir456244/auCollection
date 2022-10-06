@@ -26,7 +26,7 @@ const login = () => {
                               <div className="relative flex items-center space-x-4 justify-center ">
                                 <div className='absolute left-0 flex items-center'>
 
-                                  <Image priority='true' height={25} width={25} src={google} className="absolute left-0 w-5" alt="google logo"/>
+                                  <Image priority='true' height={25} width={25} src={google} className="absolute left-0 w-5" alt="google-logo"/>
                                 </div>
                                   <span className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue with Google</span>
                               </div>
@@ -36,7 +36,7 @@ const login = () => {
                               hover:border-blue-400 focus:bg-blue-50 active:bg-blue-100">
                               <div className="relative flex items-center space-x-4 justify-center ">
                                 <div className='absolute left-0 flex items-center'>
-                                  <Image priority='true' height={25} width={25} src={facebook} className="absolute left-0 w-5" alt="Facebook logo" />
+                                  <Image priority='true' height={25} width={25} src={facebook} className="absolute left-0 w-5" alt="Facebook-logo" />
                                 </div>
                                   <span className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue with Facebook</span>
                               </div>

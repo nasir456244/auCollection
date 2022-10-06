@@ -3,7 +3,7 @@ import { CollectBrisbaneContext } from '@/context/CollectBrisbane';
 import { Button } from '@material-tailwind/react';
 import React, { useContext } from 'react'
 
-const account = () => {
+const Account = () => {
   const { user, logout } = useContext(CollectBrisbaneContext);
 
   return (
@@ -14,4 +14,4 @@ const account = () => {
   )
 }
 
-export default account
+export default Account
