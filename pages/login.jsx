@@ -7,7 +7,7 @@ import  tailus   from '@/public/tailus.svg'
 
 import { CollectBrisbaneContext } from '@/context/CollectBrisbane'
 
-const login = () => {
+const Login = () => {
   const { user, SignInWithGoogle, SignInWithFacebook } = useContext(CollectBrisbaneContext)
 
   return (
@@ -57,4 +57,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login
