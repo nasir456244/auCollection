@@ -119,6 +119,7 @@ const PostModal = ({ addClient }) => {
       createdAt: serverTimestamp(),
       email: user?.email,
       uid: user?.uid,
+      Status: 'review',
     };
     addClientMutation.mutate({ images: filesToUpload, CollectionToPost });
     return;

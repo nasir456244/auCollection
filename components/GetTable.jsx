@@ -57,7 +57,7 @@ const GetTable = () => {
       <div className="my-8 flex flex-col gap-7">
             <div className="flex justify-between px-10 gap-5 xl:mx-[14%] ">
               <h2 className="text-2xl text-center text-gray-900 font-semibold leading-tight">
-                Collections
+                My Collections
               </h2>
               <PostModal addClient={addClient} />
             </div>
@@ -85,6 +85,7 @@ const GetTable = () => {
                       key={data?.id}
                       id={data?.id}
                       title={data?.Title}
+                      status={data?.Status}
                       photo={data?.photos[0]}
                       category={data?.Category}
                       description={data?.Description}

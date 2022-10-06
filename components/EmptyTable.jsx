@@ -6,7 +6,7 @@ const EmptyTable = () => {
     <div className="container mx-auto px-4 sm:px-8">
         <div className="py-8">
             <div>
-                <h2 className="text-2xl text-gray-900 font-semibold leading-tight">Invoices</h2>
+                <h2 className="text-2xl text-gray-900 font-semibold leading-tight">My Collections</h2>
             </div>
             <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                 <div className="inline-block min-w-full shadow-md rounded-lg overflow-hidden">

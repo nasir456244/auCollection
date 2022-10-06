@@ -5,6 +5,7 @@ import { CollectBrisbaneContext } from '@/context/CollectBrisbane';
 import { useRouter } from 'next/router';
 import Header from '@/components/Header';
 import InfoPage from '@/components/InfoPage';
+import EmptyIfonPage from '@/components/EmptyIfonPage';
 
 
 
@@ -38,14 +39,14 @@ const collection = () => {
         }
       );
 
-      if(isLoading) return <p>Loading</p>;
+      if(isLoading) return <EmptyIfonPage />;
       
   return (
     <div className={styles.container}>
         <Header />
         <div>
           <InfoPage {...tableData} />
-        </div>
+=        </div>
     </div>
   )
 }
