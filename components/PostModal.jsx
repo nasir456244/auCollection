@@ -117,7 +117,7 @@ const PostModal = ({ addClient }) => {
       Address: checkAdr?.slice(0, 150),
       Number: checkNum?.slice(0, 10),
       createdAt: serverTimestamp(),
-      email: user?.email,
+      Name: user?.name,
       uid: user?.uid,
       Status: 'review',
     };
