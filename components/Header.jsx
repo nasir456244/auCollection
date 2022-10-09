@@ -15,30 +15,30 @@ const Header = () => {
   }, []);
  
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0  text-[#000] text-blue-gray-900 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0  text-[#000] lg:flex-row lg:items-center lg:gap-6">
       <li
-        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
+        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
       >
         <a className="flex items-center">
           Pages
         </a>
       </li>
       <li
-        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
+        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
       >
         <a className="flex items-center">
           Account
         </a>
       </li>
       <li
-        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
+        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
       >
         <a className="flex items-center">
           Blocks
         </a>
       </li>
       <li
-        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
+        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
       >
         <a className="flex items-center">
           Docs
@@ -103,9 +103,11 @@ const Header = () => {
       </div>
       {openNav && <div>
         {navList}
-        <button className="font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] block w-full mb-2">
-          <span>Get Started</span>
-        </button>
+        <Link href={`${!user ? '/login' : '/account'}`}>
+          <button className="font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] block w-full mb-2">
+            <span> {!user ? 'Get Started' : 'Account'}</span>
+          </button>
+        </Link>
       </div> }
     </div>
   );
