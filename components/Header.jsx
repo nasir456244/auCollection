@@ -49,10 +49,10 @@ const Header = () => {
  
   return (
     <div className="mx-auto max-w-screen-xl rounded-[10px] bg-[#ffffffcc] py-2 shadow-xl px-4 lg:px-8 lg:py-4">
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+      <div className="container mx-auto flex items-center justify-between">
         <Link href='/'>
         <h5
-          className="block antialiased text-[#000] tracking-normal font-sans text-xl leading-snug text-inherit mr-4 cursor-pointer py-1.5 font-normal"
+          className="text-[#000] tracking-normal font-sans text-2xl leading-snug mr-4 cursor-pointer py-1.5 font-normal"
         >
           <span>Collect Brisbane</span>
         </h5>
@@ -65,7 +65,7 @@ const Header = () => {
         </Link>
         <div
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit cursor-pointer hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-6 w-6 text-blue-gray-900 cursor-pointer hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >

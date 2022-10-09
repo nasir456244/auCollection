@@ -1,11 +1,6 @@
-import React, { Fragment, useContext, useState } from 'react'
-import { getUserTable } from "queries/getUserTableQuery";
-import { useQuery } from "@tanstack/react-query";
-import { CollectBrisbaneContext } from '@/context/CollectBrisbane';
-import { useRouter } from 'next/router';
+import React from 'react'
 import Header from '@/components/Header';
-import InfoPage from '@/components/InfoPage';
-import EmptyIfonPage from '@/components/EmptyIfonPage';
+import Collection from '@/components/Collection';
 
 
 
@@ -15,43 +10,20 @@ const styles = {
 
 
 
-const Collection = () => {
-    const { user } = useContext(CollectBrisbaneContext);
-    const [tableData, setTableData] = useState([]);
-    const router = useRouter();
-    const id = router.query.id;
+const CollectionId = () => {
 
-
-    const { isLoading } = useQuery(
-        ["Collections", id],
-        () => getUserTable(id, user),
-        {
-          onSuccess(data) {
-            const newData = ({
-              id: data?.id,
-              ...data?.data(),
-            });
-            setTableData(newData);
-          },
-          enabled: !!user && id !== "undefined",
-          staleTime: Infinity,
-          refetchOnWindowFocus: false,
-        }
-      );
-
-      if(isLoading) return <EmptyIfonPage />;
       
   return (
     <div className={styles.container}>
         <Header />
         <div>
-          <InfoPage {...tableData} />
+          <Collection />
 =        </div>
     </div>
   )
 }
 
-export default Collection
+export default CollectionId
 
 
 
