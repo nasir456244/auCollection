@@ -5,7 +5,6 @@ import EmptyTable from "./EmptyTable";
 import Table from "./Table";
 import { useQuery } from "@tanstack/react-query";
 import { getUserTables } from "queries/getAllUserTableQuesry";
-import { Button } from "@material-tailwind/react";
 import PostModal from "./PostModal";
 
 const GetTable = () => {
@@ -94,16 +93,15 @@ const GetTable = () => {
           </div>
 
           <div className="flex m-4 gap-4">
-            <Button
+            <button
               disabled={!!data?.empty}
-              className="bg-cyan-500 px-4 text-white disabled:bg-cyan-50 disabled:cursor-not-allowed"
+              className="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 rounded-lg shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none bg-cyan-500 px-4 text-white disabled:bg-cyan-50 disabled:cursor-not-allowed"
               onClick={handleNextPage}
             >
             Load More
-            </Button>
+            </button>
           </div>
         </div>
-
       </div>
 
       </div>

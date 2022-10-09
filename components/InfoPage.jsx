@@ -1,33 +1,31 @@
 import React from 'react';
 import moment from 'moment';
 import Image from 'next/image';
-import { Card, CardBody, CardFooter, CardHeader, Typography } from '@material-tailwind/react';
 const InfoPage = ({id, Title, Category, Description, 
 Address, Number, createdAt, photos}) => {
   return (
     <div className='flex items-center justify-center sm:my-[20px] md:my-[40px] lg:my-[70px]'>
-      <Card className="max-w-[1000px] max-h-full overflow-hidden">
-      <CardHeader color="blue" className="max-h-[400px] max-w-full overflow-auto flex-wrap mt-5 items-center gap-2 justify-center flex p-5">
+      <div className="relative flex flex-col bg-clip-border text-gray-700 shadow-md max-w-[1000px] mx-8 bg-white rounded-[10px] max-h-full overflow-hidden">
+      <div color="blue" className="max-h-[400px] mx-6 rounded-[10px] bg-blue-500 max-w-full overflow-auto flex-wrap mt-5 items-center gap-2 justify-center flex p-5">
       {photos?.map((photo) => (
           <Image priority='true' key={photo} className="rounded-[10px] bg-[#fff]" layout='fixed' width={200} height={200} src={photo}  alt="collection-Photo" />
         ))}
-      </CardHeader>
-      <CardBody className="text-center">
-        <Typography variant="h5" className="mb-2">
+      </div>
+      <div className="text-center p-6">
+        <h5 className="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-inherit mb-2">
          {Title}
-        </Typography>
-        <Typography>
+        </h5>
+        <p className='block antialiased font-sans text-base font-light leading-relaxed text-inherit'>
           {Description}
-        </Typography>
-      </CardBody>
-      <CardFooter divider className="flex items-center justify-between py-3">
-        <Typography variant="small">{Address}</Typography>
-        <Typography variant="small" color="gray" className="flex gap-1">
-          <i className="fas fa-map-marker-alt fa-sm mt-[3px]" />
+        </p>
+      </div>
+      <div className="p-6 border-t border-blue-gray-50 flex items-center justify-between py-3">
+        <p className='block antialiased font-sans text-sm font-light leading-normal text-inherit'>{Address}</p>
+        <p className="antialiased font-sans text-sm font-light leading-normal text-gray-700 flex gap-1">
           {createdAt && moment(createdAt?.toDate())?.format('Do MMM YYYY, h:mm a')}
-        </Typography>
-      </CardFooter>
-    </Card>    
+        </p>
+      </div>
+    </div>    
     
     </div>
   )

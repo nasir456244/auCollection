@@ -1,11 +1,4 @@
 import { useState, useEffect, useContext } from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
 import Link from "next/link";
 import { CollectBrisbaneContext } from "@/context/CollectBrisbane";
  
@@ -22,70 +15,57 @@ const Header = () => {
   }, []);
  
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0  text-[#000] text-blue-gray-900 lg:flex-row lg:items-center lg:gap-6">
+      <li
+        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a className="flex items-center">
           Pages
         </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+      </li>
+      <li
+        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a className="flex items-center">
           Account
         </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+      </li>
+      <li
+        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a className="flex items-center">
           Blocks
         </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
+      </li>
+      <li
+        className="block antialiased font-sans text-sm leading-normal text-blue-gray-900 p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <a className="flex items-center">
           Docs
         </a>
-      </Typography>
+      </li>
     </ul>
   );
  
   return (
-    <Navbar className="mx-auto max-w-screen-xl py-2 px-4 lg:px-8 lg:py-4">
+    <div className="mx-auto max-w-screen-xl rounded-[10px] bg-[#ffffffcc] py-2 shadow-xl px-4 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <Link href='/'>
-        <Typography
-          variant="h5"
-          className="mr-4 cursor-pointer py-1.5 font-normal"
+        <h5
+          className="block antialiased text-[#000] tracking-normal font-sans text-xl leading-snug text-inherit mr-4 cursor-pointer py-1.5 font-normal"
         >
           <span>Collect Brisbane</span>
-        </Typography>
+        </h5>
         </Link>
         <div className="hidden lg:block">{navList}</div>
         <Link href={`${!user ? '/login' : '/account'}`}>
-          <Button variant="gradient" size="sm" className="hidden lg:inline-block">
+          <button className="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] hidden lg:inline-block">
             <span> {!user ? 'Get Started' : 'Account'}</span>
-          </Button>
+          </button>
         </Link>
-        <IconButton
+        <div
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-6 w-6 text-inherit cursor-pointer hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
@@ -93,7 +73,7 @@ const Header = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              className="h-6 w-6"
+              className="h-6 w-6 text-[#000]"
               viewBox="0 0 24 24"
               stroke="currentColor"
               strokeWidth={2}
@@ -107,7 +87,7 @@ const Header = () => {
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-6 w-6 text-[#000]"
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
@@ -119,15 +99,15 @@ const Header = () => {
               />
             </svg>
           )}
-        </IconButton>
+        </div>
       </div>
-      <MobileNav open={openNav}>
+      {openNav && <div>
         {navList}
-        <Button variant="gradient" size="sm" fullWidth className="mb-2">
+        <button className="font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85] block w-full mb-2">
           <span>Get Started</span>
-        </Button>
-      </MobileNav>
-    </Navbar>
+        </button>
+      </div> }
+    </div>
   );
 }
 

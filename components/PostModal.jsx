@@ -1,13 +1,4 @@
 import { Fragment, useContext, useState } from "react";
-import {
-  Button,
-  DialogHeader,
-  DialogBody,
-  DialogFooter,
-  Textarea,
-  Input,
-  IconButton,
-} from "@material-tailwind/react";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { UploadImagesAndCollection } from "@/lib/db";
@@ -133,39 +124,42 @@ const PostModal = ({ addClient }) => {
 
   return (
     <Fragment>
-      <Button onClick={handleOpen} variant="gradient">
+      <button className="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85]" onClick={handleOpen} variant="gradient">
         Add Collection
-      </Button>
+      </button>
       {open && (
         <div className="backdrop-blur-sm fixed left-0 flex z-50 top-0 w-screen h-screen overflow-auto px-5">
           <div className="overflow-auto bg-[#fff] shadow-2xl rounded-[10px] m-auto sm:max-h-[600px] md:max-h-[700] lg:max-h-[900px] w-[800px]">
-            <DialogHeader size="xl">Fill in the form please</DialogHeader>
+            <div className="flex items-center shrink-0 p-4 text-blue-gray-900 antialiased font-sans text-2xl font-semibold leading-snug">Fill in the form please</div>
             <form
               onSubmit={handleSubmit(handlePostCollection)}
               className="flex flex-col"
             >
-              <DialogBody divider className="flex flex-col gap-3">
+              <div className="relative flex-auto p-4 text-blue-gray-500 antialiased font-sans text-base font-light leading-relaxed border-t border-t-blue-gray-100 border-b border-b-blue-gray-100 flex flex-col gap-3">
               <p className="text-[#f00] text-center">{errors.Title?.message}</p>
-                <Input
+                <input
+                className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-blue-500"
                   {...register("Title")}
-                  label="Title"
+                  placeholder="Title"
                   required
                   maxLength={50}
                 />
 
                 <p className="text-[#f00] text-center">{errors.Category?.message}</p>
-                <Input
+                <input
                   {...register("Category")}
-                  label="Category"
+                  placeholder="Category"
                   required
                   maxLength={50}
+                  className="w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-blue-500"
                 />
 
                 <p className="text-[#f00] text-center">{errors.Number?.message}</p>
-                <Input
+                <input
                   type="tel"
+                  className="w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border  text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-blue-500"
                   {...register("Number")}
-                  label="Contact Number"
+                  placeholder="Contact Number"
                   required
                   maxLength={10}
   
@@ -173,17 +167,19 @@ const PostModal = ({ addClient }) => {
 
                 <p className="text-[#f00] text-center">{errors.Address?.message}</p>
 
-                <Input
-                  label="Pick up address"
+                <input
+                  placeholder="Pick up address"
                   {...register("Address")}
                   required
                   maxLength={150}
+                  className="w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all  border text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-blue-500"
 
                 />
 
                 <p className="text-[#f00] text-center">{errors.Description?.message}</p>
-                <Textarea
-                  label="Description"
+                <textarea
+                  placeholder="Description"
+                  className="peer w-full h-full min-h-[100px] bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 resize-y disabled:bg-blue-gray-50 disabled:border-0 disabled:resize-none transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-blue-500 !resize-none"
                   {...register("Description")}
                   required
                   maxLength={500}
@@ -230,33 +226,34 @@ const PostModal = ({ addClient }) => {
                               src={URL.createObjectURL(file)}
                             />
                           </div>
-                          <IconButton
+                          <button
+                          className="relative middle none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-8 max-w-[32px] h-8 max-h-[32px] rounded-lg text-xs bg-blue-500 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
                             size="sm"
                             onClick={() => {
                               removeImage(file.name);
                             }}
                           >
                             <i>X</i>
-                          </IconButton>
+                          </button>
                         </div>
                       );
                     })}
                   </div>
                 </div>
-              </DialogBody>
-              <DialogFooter>
-                <Button
+              </div>
+              <div className="flex items-center justify-end shrink-0 flex-wrap p-4 text-blue-gray-500">
+                <button
                   variant="text"
                   color="red"
                   onClick={handleOpen}
-                  className="mr-1"
+                  className="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg text-red-500 hover:bg-red-500/10 active:bg-red-500/30 mr-1"
                 >
                   <span>Cancel</span>
-                </Button>
-                <Button className="disabled:cursor-not-allowed" disabled={Object.keys(errors).length || files.length < 1} variant="gradient" color="green" type="submit">
+                </button>
+                <button className="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gradient-to-tr from-green-600 to-green-400 text-white shadow-md shadow-green-500/20 hover:shadow-lg hover:shadow-green-500/40 active:opacity-[0.85] disabled:cursor-not-allowed" disabled={Object.keys(errors).length || files.length < 1} variant="gradient" color="green" type="submit">
                   <span>Confirm</span>
-                </Button>
-              </DialogFooter>
+                </button>
+              </div>
             </form>
           </div>
         </div>
