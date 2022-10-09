@@ -55,7 +55,7 @@ const GetTable = () => {
     
       <div className="my-8 flex flex-col gap-7">
             <div className="flex justify-between px-10 gap-5 xl:mx-[14%] ">
-              <h2 className="text-2xl text-center text-gray-900 font-semibold leading-tight">
+              <h2 className="text-2xl sm:text-xl text-center text-gray-900 font-semibold leading-tight">
                 My Collections
               </h2>
               <PostModal addClient={addClient} />

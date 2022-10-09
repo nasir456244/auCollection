@@ -125,17 +125,24 @@ const PostModal = ({ addClient }) => {
   return (
     <Fragment>
       <button className="middle none font-sans font-bold center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-400 text-white shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/40 active:opacity-[0.85]" onClick={handleOpen} variant="gradient">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className=" sm:flex hidden w-5 h-5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+      </svg>
+       
+      <span className="sm:hidden md:flex">
         Add Collection
+      </span>
+      
       </button>
       {open && (
         <div className="backdrop-blur-sm fixed left-0 flex z-50 top-0 w-screen h-screen overflow-auto px-5">
           <div className="overflow-auto bg-[#fff] shadow-2xl rounded-[10px] m-auto sm:max-h-[600px] md:max-h-[700] lg:max-h-[900px] w-[800px]">
-            <div className="flex items-center shrink-0 p-4 text-blue-gray-900 antialiased font-sans text-2xl font-semibold leading-snug">Fill in the form please</div>
+            <div className="flex items-center shrink-0 p-4 text-[#000] antialiased font-sans text-2xl font-semibold leading-snug">Fill in the form please</div>
             <form
               onSubmit={handleSubmit(handlePostCollection)}
               className="flex flex-col"
             >
-              <div className="relative flex-auto p-4 text-blue-gray-500 antialiased font-sans text-base font-light leading-relaxed border-t border-t-blue-gray-100 border-b border-b-blue-gray-100 flex flex-col gap-3">
+              <div className="relative flex-auto p-4 text-[#000] antialiased font-sans text-base font-light leading-relaxed border-t border-t-blue-gray-100 border-b border-b-blue-gray-100 flex flex-col gap-3">
               <p className="text-[#f00] text-center">{errors.Title?.message}</p>
                 <input
                 className="peer w-full h-full bg-transparent text-blue-gray-700 font-sans font-normal outline outline-0 focus:outline-0 disabled:bg-blue-gray-50 disabled:border-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 border text-sm px-3 py-2.5 rounded-[7px] border-blue-gray-200 focus:border-blue-500"
