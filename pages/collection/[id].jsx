@@ -15,7 +15,7 @@ const styles = {
 
 
 
-const collection = () => {
+const Collection = () => {
     const { user } = useContext(CollectBrisbaneContext);
     const [tableData, setTableData] = useState([]);
     const router = useRouter();
@@ -51,7 +51,7 @@ const collection = () => {
   )
 }
 
-export default collection
+export default Collection
 
 
 
