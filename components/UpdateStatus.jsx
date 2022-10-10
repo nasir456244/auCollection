@@ -7,7 +7,7 @@ import { getDocument, UpdateDocument } from '@/lib/db';
 
 
 const styles = {
-    container: `w-full h-screen flex items-center justify-center`
+    container: `w-full h-full flex items-center justify-center`
 };
 
 
@@ -32,26 +32,26 @@ const UpdateStatus = () => {
     const upDateStatus = async () => {
         if(!user || status === "complete") return;
         await UpdateDocument(id).then(() => {
+            SetStatus("complete")
             alert(`You have updated document id of ${id}`)
         });
     }
      
     if(!user) return <Authenticate />;
 
+
   return (
-    <div className={styles.container}>
-        {status === 'complete' ?
-        
-            (
-                <p className='text-green-500 text-xl font-medium'>You have already updated the status</p>
-            )
-            :
-            (
-                <div className="flex flex-col items-center justify-center gap-10 p-6 mb-10">
-                    <p className='text-black font-medium'>Update status for document {id}</p>
-                    <button disabled={status === "complete"} onClick={upDateStatus} className='font-medium disabled:cursor-not-allowed rounded-[12px] bg-cyan-400 p-6'>Update Status</button>
-                </div>
-            )}
+    <div className={styles.container}> 
+        <div className="flex flex-col items-center justify-center mt-20 p-6 gap-10 mb-10">                  
+        {status !== 'complete' ?
+        <>
+            <p className='text-black font-medium text-center'>Update status for document {id}</p>
+            <button disabled={status === "complete"} onClick={upDateStatus} className='font-medium disabled:cursor-not-allowed rounded-[12px] bg-cyan-400 p-6'>Update Status</button>
+        </>
+        :
+            <p className='text-green-500 mt-24 text-center text-xl font-medium'>You have/already updated the status</p>
+         }       
+    </div>        
     </div>
   )
 }
