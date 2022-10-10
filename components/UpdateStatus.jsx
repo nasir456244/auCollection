@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CollectBrisbaneContext } from '@/context/CollectBrisbane';
 import { useRouter } from 'next/router';
-import Authenticate from './Authenticate';
 import { getDocument, UpdateDocument } from '@/lib/db';
 
 
@@ -18,13 +17,10 @@ const UpdateStatus = () => {
     const id = router.query.id;
     const [status, SetStatus] = useState("")
 
-    useEffect(() => {
-        getDoc()
-
-    },[user])
+    useEffect(() =>  getDoc(),[user])
 
     const getDoc = async () => {
-        if(!user) return;
+        if(!user || status === 'complete') return;
         const res = await getDocument(id)
         SetStatus(res)
     }
@@ -37,13 +33,10 @@ const UpdateStatus = () => {
         });
     }
      
-    if(!user) return <Authenticate />;
-
-
   return (
     <div className={styles.container}> 
         <div className="flex flex-col items-center justify-center mt-20 p-6 gap-10 mb-10">                  
-        {status !== 'complete' ?
+        {user && status !== 'complete' ?
         <>
             <p className='text-black font-medium text-center'>Update status for document {id}</p>
             <button disabled={status === "complete"} onClick={upDateStatus} className='font-medium disabled:cursor-not-allowed rounded-[12px] bg-cyan-400 p-6'>Update Status</button>
