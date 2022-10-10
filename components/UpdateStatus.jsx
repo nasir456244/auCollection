@@ -34,17 +34,19 @@ const UpdateStatus = () => {
     }
      
   return (
-    <div className={styles.container}> 
-        <div className="flex flex-col items-center justify-center mt-20 p-6 gap-10 mb-10">                  
-        {user && status !== 'complete' ?
-        <>
-            <p className='text-black font-medium text-center'>Update status for document {id}</p>
-            <button disabled={status === "complete"} onClick={upDateStatus} className='font-medium disabled:cursor-not-allowed rounded-[12px] bg-cyan-400 p-6'>Update Status</button>
-        </>
-        :
-            <p className='text-green-500 mt-24 text-center text-xl font-medium'>You have/already updated the status</p>
-         }       
-    </div>        
+    <div className={styles.container}>
+        {user && 
+            <div className="flex flex-col items-center justify-center mt-20 p-6 gap-10 mb-10">                  
+                {status !== 'complete' ?
+                    <>
+                        <p className='text-black font-medium text-center'>Update status for document {id}</p>
+                        <button disabled={status === "complete"} onClick={upDateStatus} className='font-medium disabled:cursor-not-allowed rounded-[12px] bg-cyan-400 p-6'>Update Status</button>
+                    </>
+                :
+                    <p className='text-green-500 mt-24 text-center text-xl font-medium'>You have/already updated the status</p>
+                }       
+            </div>        
+        } 
     </div>
   )
 }
