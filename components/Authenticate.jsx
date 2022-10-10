@@ -34,9 +34,15 @@ const Authenticate = () => {
                                   <span className="block w-max font-semibold tracking-wide text-gray-700 text-sm transition duration-300 group-hover:text-blue-600 sm:text-base">Continue with Facebook</span>
                           </div>
                       </div>
-                      <div className='text-xs mt-10 space-y-4 text-gray-600 text-center'>
+                      <div className='text-xs mt-10 space-y-8 text-gray-600 text-center'>
 
-                          <Link href='/terms'><span className='underline cursor-pointer'>By proceeding, you agree to our Terms of Use and confirm you have read our Privacy</span></Link>
+                            By proceeding, you agree to our 
+                          <Link href='/terms'><span className='underline mx-1 cursor-pointer'>Terms of Use
+                            </span></Link>
+                             and confirm you have read our 
+                             
+                            <Link href='/privacy'><span className='underline ml-1 cursor-pointer'>Privacy
+                            </span></Link>
                       </div>
                   </div>
               </div>
