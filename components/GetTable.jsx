@@ -88,6 +88,7 @@ const GetTable = () => {
                       photo={data?.photos[0]}
                       category={data?.Category}
                       description={data?.Description}
+                      createdAt={data?.createdAt}
                     />
                   ))}
           </div>
