@@ -5,7 +5,7 @@ import Collection from '@/components/Collection';
 
 
 const styles = {
-  container: `p-3 w-full h-full`,
+  container: `p-3 w-full h-full overflow-hidden`,
 };
 
 
@@ -16,9 +16,7 @@ const CollectionId = () => {
   return (
     <div className={styles.container}>
         <Header />
-        <div>
-          <Collection />
-=        </div>
+        <Collection />
     </div>
   )
 }

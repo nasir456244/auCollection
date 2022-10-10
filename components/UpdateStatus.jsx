@@ -17,7 +17,7 @@ const UpdateStatus = () => {
     const id = router.query.id;
     const [status, SetStatus] = useState("")
 
-    useEffect(() =>  getDoc(),[user])
+    useEffect(() =>  {getDoc()},[user])
 
     const getDoc = async () => {
         if(!user || status === 'complete') return;

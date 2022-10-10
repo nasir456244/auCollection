@@ -8,10 +8,6 @@ import EmptyIfonPage from '@/components/EmptyIfonPage';
 
 
 
-const styles = {
-  container: `p-3 w-full h-full`,
-};
-
 
 
 const Collection = () => {
@@ -41,11 +37,9 @@ const Collection = () => {
       if(isLoading) return <EmptyIfonPage />;
       
   return (
-    <div className={styles.container}>
-        <div>
-          <InfoPage {...tableData} />
-=        </div>
-    </div>
+      <div className='overflow-hidden flex justify-center items-center'>
+        <InfoPage {...tableData} />
+      </div>
   )
 }
 
