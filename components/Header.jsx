@@ -55,7 +55,7 @@ const Header = () => {
         <h5
           className="text-[#000] gap-2 flex items-center justify-center tracking-normal font-sans text-2xl leading-snug mr-4 cursor-pointer py-1.5 font-normal"
         >
-          <Image src={icon} width={40} height={35} />
+          <Image src={icon} width={40} height={35} alt="icon" />
           <span className="sm:hidden md:flex">AUC</span>
         </h5>
         </Link>
