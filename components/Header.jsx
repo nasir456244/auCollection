@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import { CollectBrisbaneContext } from "@/context/CollectBrisbane";
-import icon from '../public/icon.png'
+import {icon} from '@/public/icon.png'
 import Image from "next/image";
 const Header = () => {
   const [openNav, setOpenNav] = useState(false);
