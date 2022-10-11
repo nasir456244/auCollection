@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
 import { CollectBrisbaneContext } from "@/context/CollectBrisbane";
- 
+import icon from '@/public/icon.png'
+import Image from "next/image";
 const Header = () => {
   const [openNav, setOpenNav] = useState(false);
   const { user } = useContext(CollectBrisbaneContext)
@@ -16,34 +17,34 @@ const Header = () => {
  
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0  text-[#000] lg:flex-row lg:items-center lg:gap-6">
-      <li
-        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+      <Link href='/pages'
       >
-        <a className="flex items-center">
+        <a className="block antialiased flex items-center font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+>
           Pages
         </a>
-      </li>
-      <li
-        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+      </Link>
+      <Link href='/account'
       >
-        <a className="flex items-center">
+        <a className="block antialiased flex items-center font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+>
           Account
         </a>
-      </li>
-      <li
-        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+      </Link>
+      <Link href='/blocks'
       >
-        <a className="flex items-center">
+        <a  className="block antialiased flex items-center font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+>
           Blocks
         </a>
-      </li>
-      <li
-        className="block antialiased font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+      </Link>
+      <Link href='/docs'
       >
-        <a className="flex items-center">
+        <a className="block antialiased flex items-center font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
+>
           Docs
         </a>
-      </li>
+      </Link>
     </ul>
   );
  
@@ -52,9 +53,10 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         <Link href='/'>
         <h5
-          className="text-[#000] tracking-normal font-sans text-2xl leading-snug mr-4 cursor-pointer py-1.5 font-normal"
+          className="text-[#000] gap-2 flex items-center justify-center tracking-normal font-sans text-2xl leading-snug mr-4 cursor-pointer py-1.5 font-normal"
         >
-          <span>Collect Brisbane</span>
+          <Image src={icon} width={40} height={35} />
+          <span className="sm:hidden md:flex">AUC</span>
         </h5>
         </Link>
         <div className="hidden lg:block">{navList}</div>
@@ -66,7 +68,6 @@ const Header = () => {
         <div
           variant="text"
           className="ml-auto h-6 w-6 text-blue-gray-900 cursor-pointer hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
           {openNav ? (
