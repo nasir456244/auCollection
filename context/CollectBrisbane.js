@@ -35,7 +35,7 @@ export const CollectBrisbaneProvider = ({ children }) => {
     signInWithPopup(auth, googleProvider)
       .then(response => {
         handleUser(response.user)    
-        router.push('/')
+        router.push('/mycollections')
       })
       .catch(error => {
         alert(error.message)
@@ -47,7 +47,7 @@ export const CollectBrisbaneProvider = ({ children }) => {
     signInWithPopup(auth, facebookProvider)
       .then(response => {
         handleUser(response.user)
-        router.push('/')
+        router.push('/mycollections')
       })
       .catch(error => {
         alert(error.message)

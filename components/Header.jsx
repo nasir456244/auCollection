@@ -17,11 +17,11 @@ const Header = () => {
  
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0  text-[#000] lg:flex-row lg:items-center lg:gap-6">
-      <Link href='/pages'
+      <Link href='/mycollections'
       >
         <a className="block antialiased flex items-center font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
 >
-          Pages
+          Collections
         </a>
       </Link>
       <Link href='/account'
