@@ -21,7 +21,8 @@
 
 .env
 
-backend/
+dev-backend/
+Prod-backend/
 
 # debug
 npm-debug.log*
