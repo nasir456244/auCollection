@@ -17,9 +17,9 @@ const terms = () => {
                 <h2 className='text-[19px] mb-4'> INTRODUCTION</h2>
                 <p >
                     These are the terms and conditions governing the use of
-                    https://Collections.app, (the Website) and the agreement that operates
+                    https://aucollection.app, (the Website) and the agreement that operates
                     between us and you (the Terms). The Website is owned and operated by
-                    Collections &nbsp;(us/our/we) and these Terms set out the rights and
+                    AuCollection &nbsp;(us/our/we) and these Terms set out the rights and
                     obligations of all users (you/your) in relation to your use of the
                     Website.
                 </p>
@@ -33,7 +33,7 @@ const terms = () => {
                 <p>
                     If you have any questions about the Terms or the Privacy Statement, please
                     contact us through mail at{" "}
-                    support@Collections.app.
+                    support@aucollection.app.
                 </p>
                 <h2 className='text-[19px] mb-4'>CONDUCT OF USE</h2>
                 <p>
@@ -44,7 +44,7 @@ const terms = () => {
                 <h2 className='text-[19px] mb-4'>LIABILITY</h2>
                 <p>
                     The material contained within the Website is provided without any
-                    guarantees, conditions or warranties as to its accuracy. Collections does
+                    guarantees, conditions or warranties as to its accuracy. AuCollection does
                     not represent that information contained on or available via the Website
                     is accurate or complete and accordingly, it should not be relied on as
                     such. You should not rely on any such information. Any arrangements made
@@ -117,9 +117,9 @@ const terms = () => {
                     constitutes acceptance of those changes.
                 </p>
                 <h2 className='text-[19px] mb-4'> SERVICE TERMS   </h2>
-                <li className='ml-4 '>Collections at this moment grants the User a non-exclusive, non-transferable, limited right to access and use the Service, under the conditions of these Terms and Conditions and for the duration of the Agreement.</li>
+                <li className='ml-4 '>AuCollection at this moment grants the User a non-exclusive, non-transferable, limited right to access and use the Service, under the conditions of these Terms and Conditions and for the duration of the Agreement.</li>
                 <li className='ml-4 '>The use of the Service is at the User`&apos;`s own expense and risk. The User is responsible for meeting the technical and functional requirements and using the electronic communication facilities that are necessary to be able to access and use the Service. The User will at all times bear the risk of loss, theft or damage to any of its data. </li>
-                <li className='ml-4 '>Collections will have the right (but not the obligation), at its sole discretion, to review, edit, limit, refuse or remove Content, or to limit or refuse the User access to the Service. More specifically in the event the use of the Service, according to us, violates these Terms of Use.</li>
+                <li className='ml-4 '>AuCollection will have the right (but not the obligation), at its sole discretion, to review, edit, limit, refuse or remove Content, or to limit or refuse the User access to the Service. More specifically in the event the use of the Service, according to us, violates these Terms of Use.</li>
                 <li className='ml-4 '>We may disclose the User`&apos;`s Personal Data or Content, or other data relating to the use of the Service, to third parties where it believes, in good faith, that it is necessary to comply with a court order, ongoing judicial proceeding, criminal or civil subpoena, or other legal process or to exercise its constitutional rights of defense against legal claims.</li>
                 <h2 className='text-[19px] mb-4'> PERSONAL INFORMATION</h2>
                 <p>
@@ -133,9 +133,9 @@ const terms = () => {
                     comments, or other communications (“Communications”, with Visual Content
                     and Communications collectively referred to as “Content”) is the sole
                     responsibility of the account holder from which such Communications
-                    originate. You acknowledge and agree that you, and not Collections, are
+                    originate. You acknowledge and agree that you, and not AuCollection, are
                     entirely responsible for all Content that you post, or otherwise submit to
-                    the Site. Collections does not control user submitted Content and, as such,
+                    the Site. AuCollection does not control user submitted Content and, as such,
                     does not guarantee the accuracy, integrity, or quality of such Content.
                     You understand that by using the Site, you may be exposed to Content that
                     is offensive, indecent, or objectionable.
@@ -143,7 +143,7 @@ const terms = () => {
                 <p>
                     As a condition of use, you promise to abide by our Content Guidelines and
                     not to use the Services for any purpose that is unlawful or prohibited by
-                    these Terms, or any other purpose not reasonably intended by Collections.
+                    these Terms, or any other purpose not reasonably intended by AuCollection.
                     By way of example, and not as a limitation, you agree not to use the
                     Services:
                 </p>
@@ -153,7 +153,7 @@ const terms = () => {
                     that is libelous, defamatory, obscene, pornographic, abusive, offensive,
                     profane, or that infringes any copyright or other right of any person;
                 </li>
-                <li className='ml-4 '>To communicate with Collections representatives or other users in an
+                <li className='ml-4 '>To communicate with AuCollection representatives or other users in an
                     abusive or offensive manner;
                 </li>
                 <li className='ml-4 '> For any purpose (including posting or viewing Content) that is not
@@ -161,7 +161,7 @@ const terms = () => {
                 </li>
                 <li className='ml-4 '>To post or transmit, or cause to be posted or transmitted, any
                     Communication designed or intended to obtain password, account, or private
-                    information from any Collections user;
+                    information from any AuCollection user;
                 </li>
                 <li className='ml-4 '> To create or transmit unwanted ‘spam’ to any person or any URL;
                 </li>
@@ -190,12 +190,12 @@ const terms = () => {
                 <p>
                     To report a suspected abuse of the Site or a breach of the Terms (other
                     than relating to copyright infringement which is addressed under
-                    “COPYRIGHT COMPLAINTS” below), please send written notice to Collections at
-                    email: support@Collections.app.
+                    “COPYRIGHT COMPLAINTS” below), please send written notice to AuCollection at
+                    email: support@aucollection.app.
                 </p>
                 <p>
                     If the Services or Site are used in a manner that violates the Terms in
-                    any way, Collections may at its sole discretion, but is not required to,
+                    any way, AuCollection may at its sole discretion, but is not required to,
                     suspend or terminate your account, disable your access to the Site and/or
                     take any steps that it deems appropriate to address the situation.
                 </p>
@@ -245,7 +245,7 @@ const terms = () => {
                 </p>
                 <h2 className='text-[19px] mb-4'>INDEMNIFICATION </h2>
                 <p>
-                    You agree to indemnify, protect and hold harmless to Collections,
+                    You agree to indemnify, protect and hold harmless to AuCollection,
                     subsidiaries, affiliates, partners, officers, directors, agents,
                     contractors, license, service providers, subcontractors, suppliers,
                     interns and employees, harmless from any claim or demand, including
@@ -284,8 +284,8 @@ const terms = () => {
                     If you would like to: access, correct, register a complaint, or simply
                     want more information please contact us:
                 </p>
-                <p>Collections</p>
-                <p>support@Collections.app</p>
+                <p>AuCollection</p>
+                <p>support@aucollection.app</p>
             </div>
         </div>
     </div>

@@ -19,8 +19,8 @@ const privacy = () => {
                 <h3 className='text-[16px] mb-5'>Last updated 17 September, 2022</h3>
                 
                 <p>
-                This Privacy Policy describes how your personal information is collected, used, and shared when you visit https://Collections.app (the “Site”).  
-                Protecting your private information is our priority. This Statement of Privacy applies to https://Collections.app and governs data collection and usage. We have developed this policy in order for you to understand how we collect, use, communicate and make use of personal information. The following outlines our privacy policy.
+                This Privacy Policy describes how your personal information is collected, used, and shared when you visit https://aucollection.app (the “Site”).  
+                Protecting your private information is our priority. This Statement of Privacy applies to https://aucollection.app and governs data collection and usage. We have developed this policy in order for you to understand how we collect, use, communicate and make use of personal information. The following outlines our privacy policy.
                 Similar to other commercial websites, our website utilizes a standard technology called ‘cookies’ (see our cookies policy section for more information) and server logs to collect information about how our site is used. Information gathered through cookies and server logs may include the date and time of visits, the pages viewed, time spent at our site, and the websites visited just before and just after our own, as well as your IP address.
                 </p>
                 <br/>
@@ -31,14 +31,14 @@ const privacy = () => {
                 <div>
                     <li className='ml-4 '>We take seriously the protection of your privacy and confidentiality. We understand that all visitors to our website are entitled to know that their personal data will not be used for any purpose unintended by them, and will not accidentally fall into the hands of a third party</li>
                     
-                    <li className='ml-4 '>Collections undertakes to preserve the confidentiality of all information you provide to us, and hope that you reciprocate.</li>
+                    <li className='ml-4 '>AuCollection undertakes to preserve the confidentiality of all information you provide to us, and hope that you reciprocate.</li>
                     
                     <li className='ml-4 '>The law requires us to tell you about your rights and our obligations to you in regard to the processing and control of your personal data.</li>
                 </div>
                 
                 <h2 className='text-[19px] mb-4'>LOG FILES</h2>
                 <br/>
-                <p>Collections follows a standard procedure of using log files. These files, log visitors when they visit websites. All hosting companies do this and a part of hosting services`&apos;` analytics. The information collected from log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users`&apos;` movement on the website, and gathering demographic information</p>
+                <p>AuCollection follows a standard procedure of using log files. These files, log visitors when they visit websites. All hosting companies do this and a part of hosting services`&apos;` analytics. The information collected from log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users`&apos;` movement on the website, and gathering demographic information</p>
                 <h2 className='text-[19px] mb-4'>PERSONAL INFORMATION WE COLLECT</h2>
                 
                 <h3>Information you provide to us</h3>
@@ -83,9 +83,9 @@ const privacy = () => {
                 
                 <h2 className='text-[19px] mb-4'>WE DO NOT SELL, RENT OR LEASE ITS CUSTOMER LISTS TO THIRD PARTIES.</h2>
                 
-                <p>Collections may share data with trusted partners to help perform statistical analysis, send you email or postal mail, provide customer support, or arrange for deliveries. All such third parties are prohibited from using your personal information except to provide these services to Collections, and they are required to maintain the confidentiality of your information.</p>
+                <p>AuCollection may share data with trusted partners to help perform statistical analysis, send you email or postal mail, provide customer support, or arrange for deliveries. All such third parties are prohibited from using your personal information except to provide these services to AuCollection, and they are required to maintain the confidentiality of your information.</p>
                 
-                <p>Collections will disclose your personal information, without notice, only if required to do so by law or in the good faith belief that such action is necessary to: (a) Conform to the edicts of the law or comply with the legal process served on Collections or the site; (b) protect and defend the rights or property of Collections; And, (c) act under exigent circumstances to protect the personal safety of users of our website, or the public.</p>
+                <p>AuCollection will disclose your personal information, without notice, only if required to do so by law or in the good faith belief that such action is necessary to: (a) Conform to the edicts of the law or comply with the legal process served on AuCollection or the site; (b) protect and defend the rights or property of AuCollection; And, (c) act under exigent circumstances to protect the personal safety of users of our website, or the public.</p>
                 
                 <h2 className='text-[19px] mb-4'>OUR ADVERTISING PARTNERS</h2>
 
@@ -103,21 +103,21 @@ const privacy = () => {
                 <li className='ml-4 '>Provide you with our services</li>
                 <li className='ml-4 '>Provide you with suggestions and advice on services and how to obtain the most from using our website.</li>
                 
-                <p>Collections may aggregate this information in a general way and use it to provide className information, for example to monitor our performance with respect to a particular service we provide. If we use it for this purpose, you as an individual will not be personally identifiable. Collections shall continue to process this information until the contract between us ends or is terminated by either party under the terms of the contract.</p>
+                <p>AuCollection may aggregate this information in a general way and use it to provide className information, for example to monitor our performance with respect to a particular service we provide. If we use it for this purpose, you as an individual will not be personally identifiable. AuCollection shall continue to process this information until the contract between us ends or is terminated by either party under the terms of the contract.</p>
                 
-                <p>Except where you have consented to our use of your information for a specific purpose, we do not use your information in any way that would identify you personally. Collections may aggregate it in a general way and use it to provide className information, for example to monitor the performance of a particular page on our website.</p>
+                <p>Except where you have consented to our use of your information for a specific purpose, we do not use your information in any way that would identify you personally. AuCollection may aggregate it in a general way and use it to provide className information, for example to monitor the performance of a particular page on our website.</p>
                 
-                <p>You may withdraw your consent at any time by instructing us (support@Collections.app) However, if you do so, you may not be able to use our website or our services further</p>
+                <p>You may withdraw your consent at any time by instructing us (support@aucollection.app) However, if you do so, you may not be able to use our website or our services further</p>
                 <h2 className='text-[19px] mb-4'>RETENTION PERIOD FOR PERSONAL DATA</h2>
                 
-                <p>Except as otherwise mentioned in this privacy notice, Collections keeps your personal information only for as long as required by us:</p>
+                <p>Except as otherwise mentioned in this privacy notice, AuCollection keeps your personal information only for as long as required by us:</p>
                 
                 <li className='ml-4 '>To provide you with the services you have requested;</li>
                 <li className='ml-4 '>To comply with other laws, including for the period demanded by our tax authorities;</li>
                 <li className='ml-4 '>To support a claim or defense in court.</li>
                 
                 <h2 className='text-[19px] mb-4'>COOKIES AND WEB BEACONS</h2>
-                <p>Like any other website, our website - https://Collections.app uses `&apos;`cookies`&apos;`. These cookies are used to store information including visitors`&apos;` preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users`&apos;` experience by customizing our web page content based on visitors`&apos;` browser type and/or other information.</p>
+                <p>Like any other website, our website - https://aucollection.app uses `&apos;`cookies`&apos;`. These cookies are used to store information including visitors`&apos;` preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users`&apos;` experience by customizing our web page content based on visitors`&apos;` browser type and/or other information.</p>
                 
                 <p>For more general information on cookies, please read `&quot;`What Are Cookies`&quot;` from Cookie Consent.</p>
                 
@@ -129,10 +129,10 @@ const privacy = () => {
                 
                 <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
                 
-                <p>Collections does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records. </p>
+                <p>ACollection does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records. </p>
                 
                 <h2 className='text-[19px] mb-4'>INTELLECTUAL PROPERTY RIGHTS</h2>
-                <p>All copyrights, trademarks, patents and other intellectual property rights in and on our website and all content and software located on the site shall remain the sole property of Collections or its licensors. The use of our trademarks, content and intellectual property is forbidden without the express written consent from us.</p>
+                <p>All copyrights, trademarks, patents and other intellectual property rights in and on our website and all content and software located on the site shall remain the sole property of AuCollection or its licensors. The use of our trademarks, content and intellectual property is forbidden without the express written consent from us.</p>
                 
                 <p>You must not:</p>
                 
@@ -159,15 +159,15 @@ const privacy = () => {
                 
                 <h2 className='text-[19px] mb-4'>HOW YOU CAN COMPLAIN</h2>
                 
-                <p>If you are not happy with our privacy policy or if any complaints, then you should tell us by email. Our e-mail address is support@Collections.app.</p>
+                <p>If you are not happy with our privacy policy or if any complaints, then you should tell us by email. Our e-mail address is support@aucollection.app.</p>
                 
                 <h2 className='text-[19px] mb-4'>REVIEW/MODIFICATION OF THIS PRIVACY POLICY</h2>
                 
-                <p>Collections may update this privacy notice from time to time as necessary. The terms that apply to you are those posted here on our website on the day you use our website. We solely advise you to print a copy for your records.</p>
+                <p>AuCollection may update this privacy notice from time to time as necessary. The terms that apply to you are those posted here on our website on the day you use our website. We solely advise you to print a copy for your records.</p>
                 
                 <p>If you have any question regarding our privacy policy, please contact us through:</p>
                 
-                <p>E-mail:  support@Collections.app</p>
+                <p>E-mail:  support@aucollection.app</p>
                 <h2 className='text-[19px] mb-4'>COOKIES POLICY</h2>
                 
                 <p>Our website uses cookies. They are placed by the software that operates on our servers, and by software operated by third parties whose services we use. When you first visit our website, we ask you whether you wish us to use cookies. If you choose not to accept them, we shall not use them for your visit except to record that you have not consented to their use for any other purpose.</p>
@@ -182,18 +182,18 @@ const privacy = () => {
                 
                 <h2 className='text-[19px] mb-4'>PERSONAL IDENTIFIERS FROM YOUR BROWSING ACTIVITY</h2>
                 
-                <p>Information about your computer hardware and software may be automatically collected by Collections. This information can include: your IP address, browser type, domain names, access times and referring website addresses. This information is used for the operation of the service, to maintain quality of the service, and to provide general statistics regarding use of the https://Collections.app website.</p>
+                <p>Information about your computer hardware and software may be automatically collected by AuCollection. This information can include: your IP address, browser type, domain names, access times and referring website addresses. This information is used for the operation of the service, to maintain quality of the service, and to provide general statistics regarding use of the https://aucollection.app website.</p>
                 
                 <p>Requests by your web browser to our servers for web pages and other content on our website are recorded.</p>
                 
                 <p>Our website record information such as your geographical location, your Internet service provider and your IP address. We also record information about the software you are using to browse our website, such as the type of computer or device and the screen resolution.</p>
                 
-                <p>Collections uses this information in aggregate to assess the popularity of the webpages on our website and how we perform in providing content to you.</p>
+                <p>AuCollection uses this information in aggregate to assess the popularity of the webpages on our website and how we perform in providing content to you.</p>
                 
                 <h2 className='text-[19px] mb-4'>CONTACT INFORMATION</h2>
                 <p>If you would like to: access, correct, register a complaint, or simply want more information please contact us directly Via:</p>
                 
-                <p>Contact: support@Collections.app</p>       
+                <p>Contact: support@aucollection.app</p>       
             </div>
         </div>
     </div>

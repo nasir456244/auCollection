@@ -8,14 +8,13 @@ const Home = () => {
   return (
     <div className='p-3'>
         <Header />
-        <div className='flex flex-col sm:items-start md:items-center p-5 justify-around gap-10 mt-[60px]'>
-            <div className='text-blue-900 md:mr-[320px]'>
-                <h2 className='text-[30px] mb-2 text-blue-900 font-medium'>AU Collections are here.</h2>
+        <div className='flex flex-col sm:items-start p-5 md:items-center justify-around gap-10 mt-[60px]'>
+            <div className='text-blue-900 md:mr-[350px] '>
+                <h2 className='text-[30px] mb-2 text-blue-900 font-medium'>AU Collection are here.</h2>
                 <p className='font-semibold tracking-wider text-gray-800 text-md '>We come and collect your disposed items. </p>  
             </div>
-            <div className='flex gap-20 sm:flex-col'>
 
-            <div className='font-semibold tracking-wider text-gray-800 text-md'>
+            <div className='font-semibold tracking-wider md:mr-[350px] text-gray-800 text-md'>
                 <p>These are the categories we accept.</p>
                     <li>Machinery</li>
                     <li>Car Parts</li>
@@ -23,16 +22,15 @@ const Home = () => {
                     <li>Exhaust</li>
                     <p>and related Categories</p>
             </div>
-            <div className='font-semibold tracking-wider text-gray-800 text-md'>
+            <div className='font-semibold tracking-wider md:mr-[350px] text-gray-800 text-md'>
                 <p>Locations in our range at the moment. </p>
                     <li>Brisbane</li>
                     <li>Ipswich</li>
                     <li>Logan</li>
                     <li>Gold Coast</li>
             </div>
-            </div>
 
-            <div className='flex flex-col gap-3'>
+            <div className='flex flex-col gap-3 lg:ml-[150px]'>
                 <h2 className='font-semibold tracking-wider text-gray-800 text-md'>
                     Sign in to unluck the best of AUC, post your disposed item/s and we will give you a call regarding pick up.
                 </h2>
