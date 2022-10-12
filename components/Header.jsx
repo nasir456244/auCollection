@@ -53,7 +53,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between">
         <Link href='/'>
         <h5
-          className="text-[#000] gap-2 flex items-center justify-center tracking-normal font-sans text-2xl leading-snug mr-4 cursor-pointer py-1.5 font-normal"
+          className="text-2xl text-cyan-900 font-bold gap-2 flex items-center justify-center tracking-normal font-sans leading-snug mr-4 cursor-pointer py-1.5"
         >
           <Image src={logo} width={40} height={35} alt="icon" />
           <span className="sm:hidden md:flex">AUC</span>
