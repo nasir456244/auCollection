@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React, { useContext } from 'react'
 import  facebook   from '@/public/facebook.svg'
 import  google   from '@/public/google.svg'
-import  tailus   from '@/public/tailus.svg'
+import  logo   from '@/public/logo.png'
 
 import { CollectBrisbaneContext } from '@/context/CollectBrisbane'
 import Link from 'next/link'
@@ -17,8 +17,8 @@ const Authenticate = () => {
               <div className="rounded-xl bg-white shadow-xl">
                   <div className="p-6">
                       <div className="space-y-4">
-                          <Image src={tailus} alt="tailus-logo" priority='true' height={35} width={35} />
-                          <h2 className="mb-8 text-2xl text-cyan-900 font-bold">Sign in to unlock the <br /> best of Collect Brisbane.</h2>
+                          <Image src={logo} alt="tailus-logo" priority='true' height={35} width={35} />
+                          <h2 className="mb-8 text-2xl text-cyan-900 font-bold">Sign in to unlock the <br /> best of AU Collections.</h2>
                       </div>
                       <div className="mt-16 flex flex-col w-full gap-4">
                           <div onClick={SignInWithGoogle} className="group w-full flex items-center justify-center cursor-pointer sm:gap-3 md:gap-10 h-12 border-2 border-gray-300 rounded-full transition duration-300 

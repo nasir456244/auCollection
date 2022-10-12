@@ -5,7 +5,7 @@ const InfoPage = ({Title, Description,
 Address, createdAt, photos}) => {
   return (
 
-      <div className="flex flex-col gap-2 max-w-[900px] md:mt-[50px] lg:mt-[80px] sm:mt-20 text-gray-700 shadow-md bg-white rounded-[10px] overflow-hidden">
+      <div className="flex flex-col gap-2 max-w-[900px] md:mt-[50px] lg:mt-[80px] sm:mt-20 text-gray-700 shadow-lg bg-[#fff] rounded-[10px] overflow-hidden">
         <div color="blue" className="max-h-[400px] mx-6 rounded-[10px] bg-blue-500 max-w-full overflow-auto flex-wrap mt-5 items-center gap-2 justify-center flex p-5">
           {photos?.map((photo) => (
             <Image priority='true' key={photo} className="rounded-[10px] bg-[#fff]" layout='fixed' width={250} height={200} src={photo}  alt="collection-Photo" />
