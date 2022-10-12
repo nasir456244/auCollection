@@ -103,9 +103,9 @@ const privacy = () => {
                 <li className='ml-4 '>Provide you with our services</li>
                 <li className='ml-4 '>Provide you with suggestions and advice on services and how to obtain the most from using our website.</li>
                 
-                <p>Collections may aggregate this information in a general way and use it to provide class information, for example to monitor our performance with respect to a particular service we provide. If we use it for this purpose, you as an individual will not be personally identifiable. Collections shall continue to process this information until the contract between us ends or is terminated by either party under the terms of the contract.</p>
+                <p>Collections may aggregate this information in a general way and use it to provide className information, for example to monitor our performance with respect to a particular service we provide. If we use it for this purpose, you as an individual will not be personally identifiable. Collections shall continue to process this information until the contract between us ends or is terminated by either party under the terms of the contract.</p>
                 
-                <p>Except where you have consented to our use of your information for a specific purpose, we do not use your information in any way that would identify you personally. Collections may aggregate it in a general way and use it to provide class information, for example to monitor the performance of a particular page on our website.</p>
+                <p>Except where you have consented to our use of your information for a specific purpose, we do not use your information in any way that would identify you personally. Collections may aggregate it in a general way and use it to provide className information, for example to monitor the performance of a particular page on our website.</p>
                 
                 <p>You may withdraw your consent at any time by instructing us (support@Collections.app) However, if you do so, you may not be able to use our website or our services further</p>
                 <h2 className='text-[19px] mb-4'>RETENTION PERIOD FOR PERSONAL DATA</h2>
