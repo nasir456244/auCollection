@@ -46,8 +46,8 @@ const PostModal = ({ addClient }) => {
       const validImageTypes = ["image/jpg", "image/jpeg", "image/png"];
       if (validImageTypes.includes(fileType)) {
         const size = Math.round(file[i].size / 1024);
-        if (size > 2000) {
-          setMessage("file size is too big. max size is 2Mb");
+        if (size > 2500) {
+          setMessage("file size is too big. max size is 3Mb");
           return;
         }
         if (files.find((x) => x.name === file[i].name)) {
