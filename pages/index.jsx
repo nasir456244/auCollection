@@ -31,8 +31,11 @@ const Home = () => {
                     <li>Gold Coast</li>
                     <li>Sunshine Coast</li>
             </div>
+            <p className='font-semibold tracking-wider md:mr-[150px] text-gray-800 text-md max-w-[500px]'>
+                If you are looking to get rid of other items that are not in the listed categories, give us a call at 0432683236 and we will discuss.
+            </p>
 
-            <div className='flex flex-col gap-3 lg:ml-[150px]'>
+            <div className='flex flex-col gap-3 md:mr-[150px] max-w-[500px]'>
                 <h2 className='font-semibold tracking-wider text-gray-800 text-md'>
                     Sign in to unluck the best of AUC, post your disposed item/s and we will give you a call regarding pick up.
                 </h2>

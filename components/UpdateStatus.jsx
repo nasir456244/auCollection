@@ -27,10 +27,13 @@ const UpdateStatus = () => {
 
     const upDateStatus = async () => {
         if(!user || status === "complete") return;
-        await UpdateDocument(id).then(() => {
-            SetStatus("complete")
-            alert(`You have updated document id of ${id}`)
-        });
+        const result = confirm("Are you sure to update the status?")
+        if(result) {
+            await UpdateDocument(id).then(() => {
+                SetStatus("complete")
+                alert(`You have updated document id of ${id}`)
+            });
+        }
     }
      
   return (

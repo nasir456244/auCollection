@@ -9,7 +9,6 @@ import * as yup from 'yup';
 import {yupResolver } from '@hookform/resolvers/yup'
 import "yup-phone"
 
-
 const PostModal = ({ addClient }) => {
   const [open, setOpen] = useState(false);
   const [files, setFile] = useState([]);
@@ -32,6 +31,7 @@ const PostModal = ({ addClient }) => {
     onSuccess: (doc) => {
       const now = doc.filter(Boolean);
       addClient(now);
+      alert('thanks for submitting your collection, we will contact you soon.');
       setOpen(false);
     },
   });
@@ -70,6 +70,7 @@ const PostModal = ({ addClient }) => {
   const handlePostCollection = async (data) => {
     if (files.length < 1 || files.length > 5) {
       alert('Please upload at least 1-5 Png or jpg or jpg. its required');
+      toast.dismiss(loading);
       return;
     };
     const checkDes = removeSpace(data.Description);
