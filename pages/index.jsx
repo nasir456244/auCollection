@@ -17,6 +17,7 @@ const Home = () => {
             <div className='font-semibold tracking-wider md:mr-[350px] text-gray-800 text-md'>
                 <p>These are the categories we accept.</p>
                     <li>Machinery</li>
+                    <li>Complete car</li>
                     <li>Car Parts</li>
                     <li>Car Bodies</li>
                     <li>Exhaust</li>
@@ -28,6 +29,7 @@ const Home = () => {
                     <li>Ipswich</li>
                     <li>Logan</li>
                     <li>Gold Coast</li>
+                    <li>Sunshine Coast</li>
             </div>
 
             <div className='flex flex-col gap-3 lg:ml-[150px]'>
