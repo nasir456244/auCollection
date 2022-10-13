@@ -31,20 +31,6 @@ const Header = () => {
           Account
         </a>
       </Link>
-      <Link href='/blocks'
-      >
-        <a  className="block antialiased flex items-center font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
->
-          Blocks
-        </a>
-      </Link>
-      <Link href='/docs'
-      >
-        <a className="block antialiased flex items-center font-sans text-md leading-normal text-blue-gray-900 p-1 font-normal"
->
-          Docs
-        </a>
-      </Link>
     </ul>
   );
  
