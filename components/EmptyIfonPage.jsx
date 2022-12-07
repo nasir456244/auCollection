@@ -15,7 +15,7 @@ const EmptyIfonPage = () => {
         <div className="w-[400px] animate-pulse h-[80px] bg-gray-300 rounded-[10px]">
         </div>
       </div>
-      <div divider className="flex items-center px-5 border-t-[2px] mt-6 justify-between py-3">
+      <div className="flex items-center px-5 border-t-[2px] mt-6 justify-between py-3">
         <div>
             <div className='bg-gray-300 animate-pulse w-[200px] h-[30px] rounded-[10px]' />
         </div>

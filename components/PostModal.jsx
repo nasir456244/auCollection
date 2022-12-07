@@ -29,6 +29,7 @@ const PostModal = ({ addClient }) => {
 
   const addClientMutation = useMutation(UploadImagesAndCollection, {
     onSuccess: (doc) => {
+      console.log(doc, 'first')
       const now = doc.filter(Boolean);
       addClient(now);
       alert('thanks for submitting your collection, we will contact you soon.');
