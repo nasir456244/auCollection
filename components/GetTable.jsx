@@ -39,7 +39,6 @@ const GetTable = () => {
   );
 
   const addClient = (doc) => {
-    console.log(doc)
     setTableData((prev) => [...doc, ...prev]);
   };
 
